@@ -1,0 +1,183 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  // min-width: 320px;
+  // width: 30%;
+  width: 100%;
+  // width: 320px;
+  // height: 100vh;
+  height: 30%;
+  
+  background-image: url(../img/prom.jpg);
+  
+  z-index: 1000;
+
+  &__wrapper {
+    position: absolute;
+    top:0;
+    left:0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-color: $bg-color-main;
+  }
+
+  &__navigation {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 300px;
+      margin: 0 auto;
+    }
+    li {
+      margin: 10px 2px;
+    }
+
+    a {
+      font-size: $font-size-xs;
+      color: $links-color-text--default;
+      padding: 5px 20px;
+
+      border: 1px solid $links-color-text--default;
+      border-radius: 50px;
+      &:hover{
+        background: $bg-color-white;
+        color: $links-color-text--hover;
+      }
+      &:focus {
+        background: $bg-color-white;
+        color: $links-color-text--hover;
+        outline: none;
+      }
+      &:active {
+        color: $links-color-text--default;
+        background: transparent;
+      }
+    }
+  }
+
+}
+
+.main-conteiner {
+  min-width: 320px;
+  margin: 0 auto;
+
+  text-align: center;
+
+  &__logo {
+    margin-top: 20px;
+  }
+
+  h1 {
+    display: none;
+    font-size: $font-size-xxxxl;
+    font-weight: 300;
+    color: #fff;
+    small {
+      display: none;
+      font-size: $font-size-s;
+    }
+  }
+  &__navigation-services {
+    ul {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+
+      border-width: 10px;
+      &:after {
+        content: "";
+
+        position: absolute;
+
+        top: 55px;
+        left: 30px;
+
+        width: 240px;
+        height: 1px;
+
+        background-color: #fff;
+      } 
+      &:nth-child(3)::after {
+        top: 70px;
+      }
+    }
+    a {
+      font-size: $font-size-l;
+      color: $links-color-text--default;
+      &:hover{
+        color: hsla(230,100%,100%,0.5);
+      }
+      &:focus {
+        color: hsla(230,100%,100%,0.5);
+        outline: none;
+      }
+      &:active {
+        color: $links-color-text--default;
+      }
+    }
+
+    span {
+      display: block;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: $screen-table) {
+  .header {
+    // width: 100%;
+    // height: 200px;
+    position: fixed;
+    width: 30%;
+    height: 100vh;
+  }
+}
+
+@media (min-width: $screen-table) {
+  
+  .main-conteiner {
+    h1 {
+      small {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-desktop) {
+  // .header {
+  //   width: 450px;
+  // }
+}
+
+// .header {
+//   height: 200px;
+// } 
+
+// .main-conteiner__logo {
+//   width: 100px;
+//   height: 100px;
+//   margin-top: 10px;
+// }
+
+// .main {
+//   padding-top: 200px;
+// }
+
+// .header__navigation {
+//   bottom: 5px;
+//   left: 0;
+//   width: 100%;
+//   position: absolute;
+// }

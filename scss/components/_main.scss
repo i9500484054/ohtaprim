@@ -1,0 +1,23 @@
+.main {
+  width: 100%;
+  min-width: 320px;
+  
+
+  section {
+    display: none;
+  }
+}
+
+
+
+@media (min-width: $screen-table) {
+  
+
+}
+@media (min-width: $screen-desktop) {
+  .main {
+    // max-width: 1024px;
+    width: 70%;
+    margin-left: 30%;
+  }
+}

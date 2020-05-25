@@ -1,0 +1,63 @@
+@mixin text($color, $font-size, $line-height, $font-weight) {
+  color: $color;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+@mixin bg($color,$border-size, $border-color) {
+  background: $color;
+  border: $border-size solid $border-color;
+}
+
+@mixin bg-img($bg,$bg-url) {
+  background-color:$bg;
+  background-image:$bg-url;
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-size:100% 100%;
+}
+
+@mixin before($top,$left,$width,$height,$bg,$bg-url,$y,$x) {
+    content: "";
+  
+    position: absolute;
+  
+    top: $top;
+    left: $left;
+  
+    width: $width;
+    height: $height;
+  
+    background-color:$bg;
+    background-image:$bg-url;
+    background-repeat: no-repeat;
+    background-position: $y $x;
+}
+
+
+
+@mixin triangle($directions,$size,$color,$y,$x) {
+  content: ''; 
+  position: absolute; /* Абсолютное позиционирование */
+  left: $x; 
+  bottom: $y; /* Положение треугольника */
+  border: 10px solid transparent; /* Прозрачные границы */
+  $directions : $size solid green; /* Добавляем треугольник вниз*/
+  // border-top: 10px solid $color; /* Добавляем треугольник вниз*/
+  // border-bottom: 10px solid $color; /* Добавляем треугольник вверх*/
+  // border-left: 10px solid $color; /* Добавляем треугольник вправо */
+  // border-right: 10px solid $color; /* Добавляем треугольник влево*/
+ }
+
+
+
+
+
+@media (min-width: $screen-table) {
+
+}
+
+@media (min-width: $screen-desktop) {
+
+}

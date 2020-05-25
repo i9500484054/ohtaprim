@@ -1,0 +1,17 @@
+@import "normalize";
+@import "fonts";
+@import "normalize";
+@import "variables";
+@import "mixins";
+@import "base";
+
+@import "./components/header";
+@import "./components/main";
+@import "./components/about";
+@import "./components/services";
+@import "./components/project";
+@import "./components/contact";
+@import "./components/request";
+@import "./components/footer";
+// @import "./components/test";
+@import "./components/swiber";

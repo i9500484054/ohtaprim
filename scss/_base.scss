@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+
+      font-family: $font-family-global; 
+
+  box-sizing: border-box;
+
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  box-sizing: border-box;
+
+  cursor: pointer;
+}
+
+// i {
+//   padding-right: 17px;
+
+//   background: -webkit-linear-gradient(360deg, #fa0891, #f35831);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+// }
+
+
+.triangle::after {
+  content: ''; 
+  position: absolute; /* Абсолютное позиционирование */
+  left: 20px; bottom: -20px; /* Положение треугольника */
+  border: 10px solid transparent; /* Прозрачные границы */
+  border-top: 10px solid green; /* Добавляем треугольник */
+ }
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  -webkit-clip-path: inset(100%);
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+@media (min-width: $screen-table) {
+  body {
+    flex-direction: row;
+    padding-top: 20px;
+    // padding-left: 320px;
+  }
+}
+
+@media (min-width: $screen-desktop) {
+  body {
+    // padding-left: 450px;
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+.footer {
+  &__navigation {
+    ul {
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-around;
+    }
+    li {
+      font-size: $font-size-xs;
+    }
+    a {
+      color: $text-color-dark-grey;
+    }
+  }
+  &__copyrat {
+    margin: 10px;
+    color: $text-color-dark-grey;
+  }
+}

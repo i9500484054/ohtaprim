@@ -1,0 +1,316 @@
+.services {
+  // display: block !important;
+  h2 {
+    @include text($bg-color-grey, $font-size-xxxl, $font-size-xxxxl + 10px, 300);
+    padding: 0 20px;
+  }
+  p {
+    color: $text-color-dark-grey;
+    font-size: $font-size-s;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+  .basic-services {
+
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 0 0;
+      grid-template-areas: "basic-services__design" "basic-services__jobs" "basic-services__supervision" "basic-services__Add-title" "basic-services__production" "basic-services__supply" "basic-services__development";
+    }
+
+    &__item {
+      padding: 10px;
+      a {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-color: $bg-color-item-white-test;
+        &::before {
+          content: "1";
+    
+          position: absolute;
+        
+          top: 25px;
+          left: 21px;
+          
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 20px;
+          height: 20px;
+
+          font-size: $font-size-m;
+          color: $bg-color-turquoise;
+          border: 2px solid $bg-color-turquoise;
+        }
+      }
+
+      h3 {
+        @include text($text-color-grey, $font-size-l, $font-size-l + 2px, 700);
+        margin: 60px 20px 20px;
+      }
+      p {
+        @include text($text-color-grey, $font-size-s, $font-size-s + 2px, 500)
+      }
+
+    }
+    
+    &__design {
+      grid-area: basic-services__design; 
+      @include bg-img($bg-color-light-gray,url(../img/bg-service/design.jpg));
+    }
+    
+    &__jobs {
+      grid-area: basic-services__jobs; 
+      @include bg-img($bg-color-light-gray,url(../img/bg-service/job.jpg));
+      a {
+        &::before {
+          content: "2";
+        }
+      }
+    }
+    
+    &__supervision {
+      grid-area: basic-services__supervision;
+      @include bg-img($bg-color-light-gray,url(../img/bg-service/supervision.jpg));
+      a {
+        &::before {
+          content: "3";
+        }
+      }
+    }
+    
+    &__Add-title {
+      grid-area: basic-services__Add-title;
+      background-color: $bg-color-white-gray;
+      a {
+        &::before {
+          content: "";
+        }
+      }
+    }
+    
+    &__production {
+      grid-area: basic-services__production;
+      @include bg-img($bg-color-light-gray,url(../img/bg-service/production.jpg));
+      a {
+        &::before {
+          content: "4";
+        }
+      }
+    }
+    
+    &__supply {
+      grid-area: basic-services__supply;
+      @include bg-img($bg-color-light-gray,url(../img/bg-service/supply.jpg));
+      a {
+        &::before {
+          content: "5";
+        }
+      }
+    }
+    
+    &__development {
+      grid-area: basic-services__development;
+      @include bg-img($bg-color-light-gray,url(../img/bg-service/development.jpg));
+      a {
+        &::before {
+          content: "6";
+        }
+      }
+    }
+  }
+  .services__objects {
+    position: relative;
+    @include bg-img($bg-color-turquoise, url(../img/prom.jpg));
+    ul {
+      padding: 30px 50px 60px;
+      background-color: $bg-color-block-turquoise;
+      &:after {
+        @include before(200px, 55px, 80px, 40px, transparent, url(../img/css_sprites.png), -152px, -111px);
+      }
+    }
+    li {
+      color: $text-color-white;
+      &:nth-child(1) {
+        text-transform: uppercase;
+        font-size: $font-size-l;
+      }
+      &:nth-child(2) {
+        font-size: $font-size-xxxxxl;
+        font-weight: 700;
+      }
+      &:nth-child(3) {
+        width: 200px;
+        font-size: $font-size-l;
+      }
+    }
+  }
+  .services__reviews {
+    text-align: center;
+    background-color: $bg-color-white-gray;
+    h3 {
+      padding: 20px 0;
+      font-size: $font-size-l;
+      color: $text-color-grey;
+      text-transform: uppercase;
+    }
+    p {
+      padding: 0 20px 40px;
+      margin: 0;
+      font-size: $font-size-s;
+      color: $text-color-dark-grey;
+      text-align: left;
+    }
+  }
+  .services-footer {
+    &__slogan {
+      position: relative;
+      background-color: $bg-color-grey;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 136px;
+        bottom: -39px;
+        border: 20px solid transparent;
+        border-top: 20px solid $bg-color-grey;
+        z-index: 10;
+      }
+      p {
+        padding: 28px;
+        margin: 0;
+        color: $text-color-white;
+        font-size: $font-size-l;
+        text-align: center;
+      }
+    }
+    .footer-contacts {
+      background-color: $bg-color-turquoise;
+      color: $text-color-white;
+      &__list {
+        max-width: 250px;
+        margin: 0 auto;
+        padding: 28px;
+      }
+      &__item {
+        margin: 10px 0;
+      }
+      &__icon {
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+      &__tel {
+        @include text($text-color-white, $font-size-l, $font-size-l + 2px, 700);
+      }
+      &__opening-hours {
+        @include text($text-color-white, $font-size-m, $font-size-m + 2px, 500);
+      }
+      &__callback {
+        position: relative;
+        padding-left: 35px;
+        @include text($text-color-white, $font-size-l, $font-size-l + 2px, 700);
+        &:before {
+          @include before(-1px, -1px, 31px, 31px, transparent, url(../img/css_sprites.png), -172px, -75px);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-table) {
+  .services {
+    .basic-services {
+      &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "basic-services__design basic-services__design" "basic-services__jobs basic-services__supervision" "basic-services__Add-title basic-services__production" "basic-services__supply basic-services__development";
+      }
+    }
+    .services__wrapper {
+      display: flex;
+    }
+    .services__objects {
+      width: 45%;
+      min-width: 200px;
+      ul {
+        padding: 30px 9% 60px;
+        &:after {
+          left: 9%;
+        }
+      }
+    }
+    .services-footer {
+      display: flex;
+      &__slogan {
+        width: 50%;
+        &::after {
+          left: 99%;
+          bottom: 111px;
+          border: 20px solid transparent;
+          border-left: 20px solid #4d4f58;
+        }
+        p {
+          text-align: left;
+          padding: 120px 13px 2px;
+          font-size: $font-size-m;
+        }
+      }
+      .footer-contacts {
+        width: 50%;
+        &__callback {
+          font-size: $font-size-m;
+          &:before {
+            top: -5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-desktop) {
+  .services {
+    .basic-services {
+      &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 0.5fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas: "basic-services__design basic-services__jobs basic-services__supervision" "basic-services__Add-title basic-services__Add-title basic-services__Add-title" "basic-services__production basic-services__supply basic-services__development";}
+    }
+    .services__objects {
+      width: 40%;
+    }
+    .services__reviews {
+      width: 60%;
+    }
+    
+    .services-footer {
+      &__slogan {
+        position: relative;
+        background-color: $bg-color-grey;
+        &::after {
+          left: 99%;
+          bottom: 90px;
+          border: 20px solid transparent;
+          border-left: 20px solid $bg-color-grey;
+        }
+        p {
+          font-size: $font-size-xl;
+          padding: 84px 44px 2px;
+        }
+      }
+      .footer-contacts {
+        &__list {
+          max-width: 500px;
+          padding: 20px 70px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,612 @@
+.about {
+  // display: block !important;
+  h2 {
+    @include text($bg-color-grey, $font-size-xxxl, $font-size-xxxxl + 10px, 300);
+    padding: 0 20px;
+  }
+
+  p {
+    color: $text-color-dark-grey;
+    font-size: $font-size-s;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .advantage {
+    display: grid;
+    grid-template-rows: 200px 200px 200px 200px 200px;
+    gap: 0 0;
+    grid-template-areas: "advantage__list-one" "advantage__list-two" "advantage__list-three" "advantage__list-four" "advantage__list-five";
+
+    &__list {
+      position: relative;
+      padding: 60px 20px 0px;
+      @include bg($bg-color-white, 1px, $bg-color-white-gray);
+      &:before {
+        @include before(15px, 20px, 48px, 45px, transparent, url(../img/css_sprites.png), -179px, -11px);
+      }
+
+      h3 {
+        width: 140px;
+        padding: 10px 0;
+        @include text($text-color-grey, $font-size-m, $font-size-m + 5px, 500);
+      }
+      small {
+        display: block;
+        width: 200px;
+        padding: 0 0;
+        @include text($text-color-dark-grey, $font-size-xs, $font-size-xs + 5px, 500);
+      }
+    }
+
+    &__list-one {
+      grid-area: advantage__list-one;
+      padding-top: 20px;
+      &:before {
+        display: none;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 136px;
+        bottom: -40px;
+        border: 20px solid transparent;
+        border-top: 20px solid $bg-color-white-gray;
+        z-index: 10;
+      }
+      @include bg($bg-color-white-gray, 1px, $bg-color-white-gray);
+      h3 {
+        min-width: 220px;
+        padding-top: 40px;
+
+        font-size: $font-size-l;
+        font-weight: 700;
+      }
+    }
+
+    &__list-two {
+      grid-area: advantage__list-two;
+    }
+
+    &__list-three {
+      grid-area: advantage__list-three;
+    }
+
+    &__list-four {
+      grid-area: advantage__list-four;
+    }
+
+    &__list-five {
+      grid-area: advantage__list-five;
+    }
+  }
+  .description {
+    position: relative;
+    height: 250px;
+    text-align: center;
+    @include bg-img(#fff, url(../img/bg-info.jpg));
+    &__wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-top: 10px;
+
+      background-color: $bg-color-main;
+    }
+    h3 {
+      display: none;
+      @include text($text-color-white, $font-size-xs - 2px, $font-size-xs + 4px, 500);
+    }
+    span {
+      display: none;
+      text-transform: uppercase;
+      @include text($text-color-white, $font-size-xxxxl, $font-size-xxxxl + 4px, 300);
+    }
+
+    p {
+      max-width: 430px;
+      padding: 14px 0px 30px 30px;
+      text-align: left;
+      @include text($text-color-white, $font-size-xs, $font-size-xs + 2px, 500);
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 60px auto;
+      margin-left: 45px;
+    }
+
+    tr:nth-child(1) {
+      display: none;
+      @include text($text-color-white, $font-size-xs, $font-size-xs + 2px, 500);
+    }
+    td {
+      width: 80px;
+      @include text($text-color-white, $font-size-xs, $font-size-xs + 2px, 500);
+      position: relative;
+      &:before {
+        @include before(-55px, 23px, 50px, 50px, transparent, url(../img/css_sprites.png), -13px, -95px);
+      }
+      &:nth-child(1):before {
+        top: -55px;
+        left: 17px;
+        background-position: -8px -97px;
+      }
+      &:nth-child(2):before {
+        top: -55px;
+        left: 15px;
+        background-position: -73px -98px;
+      }
+      &:nth-child(3):before {
+        top: -55px;
+        left: 17px;
+        background-position: -20px -18px;
+      }
+    }
+  }
+  .company-customers {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 170px 170px 170px 170px;
+    grid-template-areas: "company-customers__item-one company-customers__item-two" "company-customers__item-three company-customers__item-four" "company-customers__item-five company-customers__item-six" "company-customers__item-seven company-customers__item-eight";
+
+    &__item {
+      padding: 10px;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: $bg-color-item-white;
+      }
+    }
+
+    &__item-one {
+      grid-area: company-customers__item-one;
+      @include bg($bg-color-main-company, 0, $bg-color-main-company);
+      padding: 45px 27px;
+      a {
+        display: inline;
+        background-color: transparent;
+        @include text($text-color-grey, $font-size-l, $font-size-l + 2px, 500);
+      }
+    }
+    &__item-two {
+      grid-area: company-customers__item-two;
+      @include bg(#445469, 0, $bg-color-main-company);
+    }
+    &__item-three {
+      grid-area: company-customers__item-three;
+      @include bg(#445469, 0, $bg-color-main-company);
+    }
+    &__item-four {
+      grid-area: company-customers__item-four;
+      @include bg(#c4c4c4, 0, $bg-color-main-company);
+    }
+    &__item-five {
+      grid-area: company-customers__item-five;
+      @include bg($bg-color-item-five, 0, $bg-color-main-company);
+    }
+    &__item-six {
+      grid-area: company-customers__item-six;
+      @include bg(#4d4f58, 0, $bg-color-main-company);
+    }
+    &__item-seven {
+      grid-area: company-customers__item-seven;
+      @include bg(#4d4f58, 0, $bg-color-main-company);
+    }
+    &__item-eight {
+      grid-area: company-customers__item-eight;
+      @include bg($bg-color-item-eight, 0, $bg-color-main-company);
+    }
+    &__logo-lindner {
+      width: 130px;
+      height: 25px;
+    }
+    &__logo-josefGartner {
+      width: 120px;
+      height: 60px;
+    }
+    &__logo-gazprom {
+      width: 110px;
+      height: 60px;
+    }
+    &__logo-nipigaz {
+      width: 100px;
+      height: 100px;
+    }
+    &__logo-rosneft {
+      width: 120px;
+      height: 100px;
+    }
+    &__logo-yamalspg {
+      width: 120px;
+      height: 60px;
+    }
+    &__logo-novatek {
+      width: 120px;
+      height: 50px;
+    }
+  }
+  .normative-documents {
+    &__header {
+      position: relative;
+      padding: 20px 20px;
+      margin-bottom: 40px;
+      background-color: $bg-color-white-gray;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 136px;
+        bottom: -40px;
+        border: 20px solid transparent;
+        border-top: 20px solid $bg-color-white-gray;
+        z-index: 10;
+      }
+      small {
+        @include text($text-color-dark-grey, $font-size-s, $font-size-s + 2, 500);
+      }
+      h3 {
+        margin: 20px 0;
+        @include text($text-color-grey, $font-size-xxl, $font-size-xxl + 2, 500);
+      }
+    }
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__img {
+      margin-bottom: 20px;
+    }
+    &__alt {
+      text-align: center;
+      @include text($text-color-grey, $font-size-m, $font-size-m + 2px, 500);
+    }
+  }
+  .about__objects {
+    position: relative;
+    @include bg-img($bg-color-turquoise, url(../img/prom.jpg));
+    ul {
+      padding: 30px 50px 60px;
+      background-color: $bg-color-block-turquoise;
+      &:after {
+        @include before(200px, 55px, 80px, 40px, transparent, url(../img/css_sprites.png), -152px, -111px);
+      }
+    }
+    li {
+      color: $text-color-white;
+      &:nth-child(1) {
+        text-transform: uppercase;
+        font-size: $font-size-l;
+      }
+      &:nth-child(2) {
+        font-size: $font-size-xxxxxl;
+        font-weight: 700;
+      }
+      &:nth-child(3) {
+        width: 200px;
+        font-size: $font-size-l;
+      }
+    }
+  }
+  .about__reviews {
+    text-align: center;
+    background-color: $bg-color-white-gray;
+    h3 {
+      padding: 20px 0;
+      font-size: $font-size-l;
+      color: $text-color-grey;
+      text-transform: uppercase;
+    }
+    p {
+      padding: 0 20px 40px;
+      margin: 0;
+      font-size: $font-size-s;
+      color: $text-color-dark-grey;
+      text-align: left;
+    }
+  }
+  .about-footer {
+    &__slogan {
+      position: relative;
+      background-color: $bg-color-grey;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 136px;
+        bottom: -39px;
+        border: 20px solid transparent;
+        border-top: 20px solid $bg-color-grey;
+        z-index: 10;
+      }
+      p {
+        padding: 28px;
+        margin: 0;
+        color: $text-color-white;
+        font-size: $font-size-l;
+        text-align: center;
+      }
+    }
+    .footer-contacts {
+      background-color: $bg-color-turquoise;
+      color: $text-color-white;
+      &__list {
+        max-width: 250px;
+        margin: 0 auto;
+        padding: 28px;
+      }
+      &__item {
+        margin: 10px 0;
+      }
+      &__icon {
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+      &__tel {
+        @include text($text-color-white, $font-size-l, $font-size-l + 2px, 700);
+      }
+      &__opening-hours {
+        @include text($text-color-white, $font-size-m, $font-size-m + 2px, 500);
+      }
+      &__callback {
+        position: relative;
+        padding-left: 35px;
+        @include text($text-color-white, $font-size-l, $font-size-l + 2px, 700);
+        &:before {
+          @include before(-1px, -1px, 31px, 31px, transparent, url(../img/css_sprites.png), -172px, -75px);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-table) {
+  .about {
+    .advantage {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 210px 210px 210px;
+      gap: 0px 0px;
+      grid-template-areas: "advantage__list-one advantage__list-one" "advantage__list-two advantage__list-three" "advantage__list-four advantage__list-five";
+
+      &__list-one {
+        h3 {
+          width: 400px;
+        }
+        small {
+          font-size: $font-size-s;
+        }
+      }
+    }
+    .description {
+      height: 310px;
+      h3 {
+        display: block;
+        max-width: 410px;
+        margin-left: 20px;
+        text-align: left;
+        font-size:$font-size-m;
+      }
+
+      span {
+        display: block;
+        font-size:$font-size-xl;
+        padding-top: 10px;
+      }
+
+      p {
+        padding-left: 20px;
+        padding-bottom: 0;
+      }
+
+      table {
+        margin: 0;
+        margin-top: 50px;
+        margin-left: 20px;
+        text-align: left;
+      }
+
+      tr:nth-child(1) {
+        display: table-row;
+        margin: 0;
+      }
+
+      th {
+        width: 100px;
+        padding-left: 55px;
+        padding-right: 10px;
+        font-size: $font-size-xs - 2px;
+        text-transform: uppercase;
+      }
+
+      th:nth-child(1) {
+        padding-left: 40px;
+        padding-right: 20px;
+      }
+
+      td {
+        padding: 20px 0;
+        &:nth-child(1):before {
+          top: -42px;
+          left: -7px;
+        }
+        &:nth-child(2):before {
+          top: -49px;
+          left: -1px;
+        }
+        &:nth-child(3):before {
+          top: -40px;
+          left: 0px;
+        }
+      }
+    }
+    .company-customers {
+      &__item-one {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          width: auto;
+          height: auto;
+        }
+      }
+      &__item {
+        padding: 20px;
+      }
+      &__logo-lindner {
+        width: 150px;
+        height: 50px;
+      }
+      &__logo-josefGartner {
+        width: 185px;
+        height: 80px;
+      }
+      &__logo-gazprom {
+        width: 150px;
+        height: 100px;
+      }
+      &__logo-rosneft {
+        width: 150px;
+        height: 100px;
+      }
+      &__logo-yamalspg {
+        width: 200px;
+        height: 100px;
+      }
+      &__logo-novatek {
+        width: 170px;
+        height: 50px;
+      }
+    }
+    .normative-documents {
+      flex-direction: row;
+      &__header {
+        &::after {
+          left: 45%;
+          bottom: -40px;
+          border-top: 20px solid $bg-color-white-gray;
+        }
+      }
+    }
+    .about__wrapper {
+      display: flex;
+    }
+    .about__objects {
+      width: 45%;
+      min-width: 200px;
+      ul {
+        padding: 30px 9% 60px;
+        &:after {
+          left: 9%;
+        }
+      }
+    }
+    .about-footer {
+      display: flex;
+      &__slogan {
+        width: 50%;
+        &::after {
+          left: 99%;
+          bottom: 111px;
+          border: 20px solid transparent;
+          border-left: 20px solid #4d4f58;
+        }
+        p {
+          text-align: left;
+          padding: 120px 13px 2px;
+          font-size: $font-size-m;
+        }
+      }
+      .footer-contacts {
+        width: 50%;
+        &__callback {
+          font-size: $font-size-m;
+          &:before {
+            top: -5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-desktop) {
+  .about {
+
+    .advantage {
+      grid-template-columns: 33.33% 33.33% 33.33%;
+      grid-template-rows: 250px 250px;
+      grid-template-areas: "advantage__list-one advantage__list-one advantage__list-two" "advantage__list-three advantage__list-four advantage__list-five";
+      &__list-one {
+        &::after {
+          left: 100%;
+          bottom: 90px;
+          border: 20px solid transparent;
+          border-left: 20px solid #E8E8E8;
+        }
+      }
+    }
+
+    .company-customers {
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-rows: 170px 170px;
+      grid-template-areas: "company-customers__item-one company-customers__item-two company-customers__item-four company-customers__item-three" "company-customers__item-five company-customers__item-six company-customers__item-eight company-customers__item-seven";
+    }
+    .normative-documents {
+      display: flex;
+      &__header {
+        width: 40%;
+        margin-bottom: 0;
+        &::after {
+          left: 100%;
+          bottom: 200px;
+          border: 20px solid transparent;
+          border-left: 20px solid #E8E8E8;
+        }
+      }
+      &__container {
+        width: 60%;
+        padding-top: 20px;
+      }
+    }
+
+    .about__objects {
+      width: 40%;
+    }
+    .about__reviews {
+      width: 60%;
+    }
+    
+    .about-footer {
+      &__slogan {
+        position: relative;
+        background-color: $bg-color-grey;
+        &::after {
+          left: 99%;
+          bottom: 90px;
+          border: 20px solid transparent;
+          border-left: 20px solid $bg-color-grey;
+        }
+        p {
+          font-size: $font-size-xl;
+          padding: 84px 44px 2px;
+        }
+      }
+      .footer-contacts {
+        &__list {
+          max-width: 500px;
+          padding: 20px 70px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+

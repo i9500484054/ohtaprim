@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Охта-Прим
+    link(rel="stylesheet", href="https://unpkg.com/swiper/css/swiper.min.css")
+    link(rel="stylesheet", href="css/main.css")
+    script(src="js/jquery-3.5.0.min.js")
+    script(src="https://kit.fontawesome.com/20a529a9f1.js", crossorigin="anonymous")
+    script(src="https://unpkg.com/swiper/js/swiper.min.js")
+  body
+    header.header
+      .header__wrapper
+        section(class="header__main-conteiner main-conteiner") 
+          a(href="#")
+            img(
+              class="main-conteiner__logo",
+              src="img/logo.png",
+              alt="company logo",
+              width="150",
+              height="150"
+              )
+          h1 ОХТА-ПРИМ
+            small НАУЧНО-ПРОИЗВОДСТВЕННОЕ ОБЪЕДИНЕНИЕ
+            small ЦЕНТР АНТИКОРРОЗИОННЫХ И ОГНЕЗАЩИТНЫХ ТЕХНОЛОГИЙ
+          nav.main-conteiner__navigation-services
+            ul
+              li
+                a(href="#") ПОСТАВКА
+                  span материалов и оборудования
+              li
+                a(href="#") ВЫПОЛННЕНИЯ РАБОТ
+                  span антикоррозионная и огнезащита
+              li
+                a(href="#") ПРОЕКТИРОВАНИЕ
+                  span разработка проектных решений и техническая поддержка
+        nav.header__navigation
+            ul
+              li
+                a(class="btn-about", href="#about") О компании
+              li
+                a(class="btn-services", href="#services") Услуги
+              li
+                a(class="btn-project", href="#project") Проекты
+              li
+                a(class="btn-request", href="#request") Обсудить проект
+              li
+                a(class="btn-contact", href="#contact") Контакты
+    main(class="main", id="main")
+      include components/_about.pug
+      include components/_contact.pug
+      include components/_services.pug
+      include components/_project.pug
+      include components/_footer.pug
+      //- include components/_request.pug
+      section(class="main__request request", id="request")
+        h2 Обсудить проект 
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni maxime eveniet perspiciatis aut, repellat, laborum saepe hic illum at distinctio laudantium et maiores similique dignissimos velit eaque facilis placeat architecto?
+    script(src="js/script.js")
