@@ -1,5 +1,5 @@
 .about {
-  // display: block !important;
+  display: block;
   h2 {
     @include text($bg-color-grey, $font-size-xxxl, $font-size-xxxxl + 10px, 300);
     padding: 0 20px;

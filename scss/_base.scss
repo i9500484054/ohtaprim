@@ -66,21 +66,11 @@ body {
   height: 100vh;
 }
 
-@media (min-width: $screen-table) {
-  body {
-    flex-direction: row;
-    padding-top: 20px;
-    // padding-left: 320px;
-  }
-}
-
 @media (min-width: $screen-desktop) {
   body {
-    // padding-left: 450px;
+    flex-direction: row;
   }
 }
-
-
 
 
 

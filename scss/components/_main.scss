@@ -1,22 +1,28 @@
 .main {
   width: 100%;
   min-width: 320px;
+  margin-top: 150px;
   
 
   section {
     display: none;
   }
+  section:nth-child(1) {
+    display: block;
+  }
+
 }
-
-
 
 @media (min-width: $screen-table) {
-  
-
+  .main {
+    margin-top: 180px;
+  }
 }
+
 @media (min-width: $screen-desktop) {
   .main {
     // max-width: 1024px;
+    margin-top: 20px;
     width: 70%;
     margin-left: 30%;
   }
