@@ -14,7 +14,6 @@ $(function () {
 			// $('.block-request-cost').css('display','none');
 		});
 
-
 	$('.company-customers li:nth-last-child(-n+7)').hover(
 		function () {
 			$(this).animate({padding: "0"}, 100);
@@ -24,11 +23,11 @@ $(function () {
 		});
 
 
-	$('.header__wrapper a').on('click', function (event) {
+	$('.header__wrapper a, .footer__navigation a').on('click', function (event) {
 		event.preventDefault();// ????
 
-		let sectionId = $(this).attr('href') // id активной секции 
-
+		let sectionId = $(this).attr('href'); // id активной секции
+		console.log(sectionId)
 		// анимированное сворачивание хедера 
 		if (bodyWidth >= 1024) {
 			$('.header').animate({
@@ -70,6 +69,24 @@ $(function () {
 
 	});
 	
+	$('.basic-services__design, .basic-services__development').on('click', function(event){
+		event.preventDefault();
+		hideContentSection();
+		$('#design').css('display','block');
+	});
+
+	$('.basic-services__supply, .basic-services__production').on('click', function(event){
+		event.preventDefault();
+		hideContentSection();
+		$('#supply').css('display','block');
+	});
+
+	$('.basic-services__jobs, .basic-services__supervision').on('click', function(event){
+		event.preventDefault();
+		hideContentSection();
+		$('#work').css('display','block');
+	});
+
 	// Читска body от ранее открытых секций 
 	function hideContentSection() {
 		$('#main section').css('display', 'none')
@@ -89,7 +106,10 @@ $(function () {
 	function addLink() {
 		$("head").append('<link rel="stylesheet" href="css/main-test.css"/>')
 	}
+
 });
+
+
 
 
 // Настраиваем слайдер SWIBER

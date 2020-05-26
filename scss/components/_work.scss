@@ -1,0 +1,296 @@
+.work {
+  h2 {
+    @include text($bg-color-grey, $font-size-xxl, $font-size-xxl + 2px, 500);
+    padding: 0 20px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  h3 {
+    color: $text-color-dark-grey;
+    font-size: $font-size-s;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__request-box {
+    display: flex;
+    width: 100%;
+  }
+  &__request-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 10px 10px;
+    font-size:$font-size-xs;
+    color: $text-color-dark-grey;
+    background-color: $bg-color-white-gray;
+  }
+  &__request-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 10px 0;
+    font-size:$font-size-s;
+    color: $text-color-white;
+    text-transform: uppercase;
+    background-color: $bg-color-turquoise;
+  }
+  &__main-text {
+  min-width: 300px;
+  margin: 10px;
+  p {
+    margin: 20px 0;
+  }
+  }
+
+  &__advantage {
+    display: grid;
+    grid-template-rows: 200px 200px 200px 200px;
+    gap: 0px 0px;
+    grid-template-areas: "work__advantage-item-one" "work__advantage-item-two" "work__advantage-item-three" "work__advantage-item-four";
+  }
+
+  &__advantage-item {
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px 15px;
+
+    color: $text-color-grey;
+    border: 1px solid $bg-color-light-gray;
+    &::before {
+      @include before(30px, 13px, 48px, 45px, transparent, url(../img/css_sprites.png), -179px, -11px);
+    }
+    h4 {
+      margin: 60px 0 20px;
+      font-size: $font-size-l;
+    }
+
+    small {
+
+    }
+  } 
+
+  &__advantage-item-one { 
+    grid-area: work__advantage-item-one;
+    
+    color: $text-color-grey;
+   
+    background-color: $bg-color-white-gray;
+    p {
+      text-align: center;
+      font-size: $font-size-xxl;
+    }
+    &::before {
+      display: none;
+    }
+  }
+
+  &__advantage-item-two { 
+    grid-area: work__advantage-item-two;   
+  }
+
+  &__advantage-item-three { 
+    grid-area: work__advantage-item-three;
+  }
+
+  &__advantage-item-four { 
+    grid-area: work__advantage-item-four; 
+  }
+  &__objects {
+    position: relative;
+    @include bg-img($bg-color-turquoise, url(../img/prom.jpg));
+    ul {
+      padding: 30px 50px 60px;
+      background-color: $bg-color-block-turquoise;
+      &:after {
+        @include before(200px, 55px, 80px, 40px, transparent, url(../img/css_sprites.png), -152px, -111px);
+      }
+    }
+    li {
+      color: $text-color-white;
+      &:nth-child(1) {
+        text-transform: uppercase;
+        font-size: $font-size-l;
+      }
+      &:nth-child(2) {
+        font-size: $font-size-xxxxxl;
+        font-weight: 700;
+      }
+      &:nth-child(3) {
+        width: 200px;
+        font-size: $font-size-l;
+      }
+    }
+  }
+  &__reviews {
+    text-align: center;
+    background-color: $bg-color-white-gray;
+    h3 {
+      padding: 20px 0;
+      font-size: $font-size-l;
+      color: $text-color-grey;
+      text-transform: uppercase;
+    }
+    p {
+      padding: 0 20px 40px;
+      margin: 0;
+      font-size: $font-size-s;
+      color: $text-color-dark-grey;
+      text-align: left;
+    }
+  }
+  .work-footer {
+    &__slogan {
+      position: relative;
+      background-color: $bg-color-grey;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 136px;
+        bottom: -39px;
+        border: 20px solid transparent;
+        border-top: 20px solid $bg-color-grey;
+        z-index: 10;
+      }
+      p {
+        padding: 28px;
+        margin: 0;
+        color: $text-color-white;
+        font-size: $font-size-l;
+        text-align: center;
+      }
+    }
+    .footer-contacts {
+      background-color: $bg-color-turquoise;
+      color: $text-color-white;
+      &__list {
+        max-width: 250px;
+        margin: 0 auto;
+        padding: 28px;
+      }
+      &__item {
+        margin: 10px 0;
+      }
+      &__icon {
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+      &__tel {
+        @include text($text-color-white, $font-size-l, $font-size-l + 2px, 700);
+      }
+      &__opening-hours {
+        @include text($text-color-white, $font-size-m, $font-size-m + 2px, 500);
+      }
+      &__callback {
+        position: relative;
+        padding-left: 35px;
+        @include text($text-color-white, $font-size-l, $font-size-l + 2px, 700);
+        &:before {
+          @include before(-1px, -1px, 31px, 31px, transparent, url(../img/css_sprites.png), -172px, -75px);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-table) {
+  h2 {
+    font-size: $font-size-xxxl;
+  }
+  h3 {
+    font-size: $font-size-l;
+  }
+  .work__advantage {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px 200px;
+    grid-template-areas: "work__advantage-item-one work__advantage-item-one work__advantage-item-one" "work__advantage-item-two work__advantage-item-three work__advantage-item-four";
+  }
+
+  .work__advantage-item-one {
+    font-size:$font-size-l;
+  }
+  .work__request-text,
+  .work__request-btn {
+    padding: 25px 0
+  }
+  .work__wrapper {
+    display: flex;
+  }
+  .work__objects {
+    width: 45%;
+    min-width: 200px;
+    ul {
+      padding: 30px 9% 60px;
+      &:after {
+        left: 9%;
+      }
+    }
+  }
+
+
+  .work-footer {
+    display: flex;
+    &__slogan {
+      width: 50%;
+      &::after {
+        left: 99%;
+        bottom: 111px;
+        border: 20px solid transparent;
+        border-left: 20px solid #4d4f58;
+      }
+      p {
+        text-align: left;
+        padding: 120px 13px 2px;
+        font-size: $font-size-m;
+      }
+    }
+    .footer-contacts {
+      width: 50%;
+      &__callback {
+        font-size: $font-size-m;
+        &:before {
+          top: -5px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-desktop) {
+  .work__objects {
+    width: 40%;
+  }
+  .work__reviews {
+    width: 60%;
+  }
+  
+  .work-footer {
+    &__slogan {
+      position: relative;
+      background-color: $bg-color-grey;
+      &::after {
+        left: 99%;
+        bottom: 90px;
+        border: 20px solid transparent;
+        border-left: 20px solid $bg-color-grey;
+      }
+      p {
+        font-size: $font-size-xl;
+        padding: 84px 44px 2px;
+      }
+    }
+    .footer-contacts {
+      &__list {
+        max-width: 500px;
+        padding: 20px 70px;
+        margin: 0;
+      }
+    }
+  }
+}

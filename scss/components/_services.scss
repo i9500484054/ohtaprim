@@ -68,7 +68,7 @@
     &__jobs {
       grid-area: basic-services__jobs; 
       @include bg-img($bg-color-light-gray,url(../img/bg-service/job.jpg));
-      a {
+      .basic-services__box {
         &::before {
           content: "2";
         }
@@ -78,7 +78,7 @@
     &__supervision {
       grid-area: basic-services__supervision;
       @include bg-img($bg-color-light-gray,url(../img/bg-service/supervision.jpg));
-      a {
+      .basic-services__box {
         &::before {
           content: "3";
         }
@@ -88,7 +88,7 @@
     &__Add-title {
       grid-area: basic-services__Add-title;
       background-color: $bg-color-white-gray;
-      a {
+      .basic-services__box {
         &::before {
           content: "";
         }
@@ -98,7 +98,7 @@
     &__production {
       grid-area: basic-services__production;
       @include bg-img($bg-color-light-gray,url(../img/bg-service/production.jpg));
-      a {
+      .basic-services__box {
         &::before {
           content: "4";
         }
@@ -108,7 +108,7 @@
     &__supply {
       grid-area: basic-services__supply;
       @include bg-img($bg-color-light-gray,url(../img/bg-service/supply.jpg));
-      a {
+      .basic-services__box {
         &::before {
           content: "5";
         }
@@ -118,7 +118,7 @@
     &__development {
       grid-area: basic-services__development;
       @include bg-img($bg-color-light-gray,url(../img/bg-service/development.jpg));
-      a {
+      .basic-services__box {
         &::before {
           content: "6";
         }
@@ -280,7 +280,7 @@
       &__list {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 2fr 1.5fr 2fr;
+        grid-template-rows: 320px 1.5fr 320px;
         gap: 0px 0px;
         grid-template-areas: "basic-services__design basic-services__jobs basic-services__supervision" "basic-services__Add-title basic-services__Add-title basic-services__Add-title" "basic-services__production basic-services__supply basic-services__development";}
     }

@@ -73,4 +73,8 @@ body {
     border: none;
     font-size: 18px;
   }
+  .header__navigation a:hover {
+    background-color: transparent;
+    color: #fff;
+  }
 }
