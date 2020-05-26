@@ -4,23 +4,29 @@ $(function () {
 
 	addLink();
 
-	$('.basic-services__item').hover(
+
+
+
+	$('.basic-services__item:not(.basic-services__Add-title)').hover(
 		function () {
 			$(this).animate({padding: "0"}, 100);
-			$('.block-request-cost').css('display','block');
+			// $('.block-request-cost').css('display','flex');
 		}, function() {
 			$(this).animate({padding: "20px"}, 100);
+			// $('.block-request-cost').css('display','none');
 		});
+
+
 	$('.company-customers li:nth-last-child(-n+7)').hover(
 		function () {
 			$(this).animate({padding: "0"}, 100);
 		}, function() {
 			$(this).animate({padding: "20px"}, 100);
-			$('.block-request-cost').css('display','none');
+	
 		});
 
 
-	$('.header__navigation a').on('click', function (event) {
+	$('.header__wrapper a').on('click', function (event) {
 		event.preventDefault();// ????
 
 		let sectionId = $(this).attr('href') // id активной секции 
@@ -104,9 +110,9 @@ let mySwiper = new Swiper(slider, {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
       },
-    // breakpoints: {
-    //     1024: {
-    //         slidesPerView: 2,
-    //     },
-    // }
+    breakpoints: {
+        1024: {
+            slidesPerView: 2,
+        },
+    }
 });

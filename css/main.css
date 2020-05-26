@@ -759,9 +759,13 @@ a {
   cursor: pointer;
 }
 
-img {
-  width: 100%;
-  height: 100%;
+input,
+textarea {
+  border: none;
+}
+
+input[type=file] {
+  display: none;
 }
 
 .triangle::after {
@@ -1806,14 +1810,15 @@ body {
   position: relative;
   padding: 20px;
 }
-.services .basic-services__item a {
+.services .basic-services__item .basic-services__box {
   position: relative;
   display: inline-block;
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
 }
-.services .basic-services__item a::before {
+.services .basic-services__item .basic-services__box::before {
   content: "1";
   position: absolute;
   top: 25px;
@@ -2322,8 +2327,8 @@ body {
 @media (min-width: 768px) {
   .project__img {
     display: flex;
-    margin: 0;
     width: 100%;
+    margin: 0;
     border-bottom: 1px solid #4D4F58;
   }
   .project__title-box {
@@ -2342,6 +2347,9 @@ body {
   .project span {
     margin-left: 0;
     margin-top: 15px;
+  }
+  .project img {
+    max-width: 300px;
   }
   .project .project-footer {
     display: flex;
@@ -2523,11 +2531,247 @@ body {
     width: 50%;
   }
 }
-.request {
-  background: rgba(106, 191, 64, 0.2);
-  border: 1 solid #6abf40;
+.request h2 {
+  color: #4D4F58;
+  font-size: 36px;
+  line-height: 58px;
+  font-weight: 300;
+  padding: 0 20px;
+}
+.request .form-request {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.request .form-request__input {
+  width: 300px;
+  padding: 10px 15px;
+  margin: 10px 10px;
+  color: #445469;
+  border: 1px solid #E7E7E7;
+}
+.request .form-request__input-file {
+  text-align: center;
+  text-transform: uppercase;
+}
+.request .form-request__input-submit {
+  text-transform: uppercase;
+}
+.request .form-request__input-textarea {
+  overflow: hidden;
 }
 
+.request__objects {
+  position: relative;
+  background-color: #74C4CF;
+  background-image: url(../img/prom.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+.request__objects ul {
+  padding: 30px 50px 60px;
+  background-color: rgba(114, 196, 207, 0.8);
+}
+.request__objects ul:after {
+  content: "";
+  position: absolute;
+  top: 200px;
+  left: 55px;
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  background-image: url(../img/css_sprites.png);
+  background-repeat: no-repeat;
+  background-position: -152px -111px;
+}
+.request__objects li {
+  color: #fff;
+}
+.request__objects li:nth-child(1) {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+.request__objects li:nth-child(2) {
+  font-size: 72px;
+  font-weight: 700;
+}
+.request__objects li:nth-child(3) {
+  width: 200px;
+  font-size: 24px;
+}
+
+.request__reviews {
+  text-align: center;
+  background-color: #E8E8E8;
+}
+.request__reviews h3 {
+  padding: 20px 0;
+  font-size: 24px;
+  color: #445469;
+  text-transform: uppercase;
+}
+.request__reviews p {
+  padding: 0 20px 40px;
+  margin: 0;
+  font-size: 14px;
+  color: #737572;
+  text-align: left;
+}
+
+.request-footer__slogan {
+  position: relative;
+  background-color: #4D4F58;
+}
+.request-footer__slogan::after {
+  content: "";
+  position: absolute;
+  left: 136px;
+  bottom: -39px;
+  border: 20px solid transparent;
+  border-top: 20px solid #4D4F58;
+  z-index: 10;
+}
+.request-footer__slogan p {
+  padding: 28px;
+  margin: 0;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
+.request-footer .footer-contacts {
+  background-color: #74C4CF;
+  color: #fff;
+}
+.request-footer .footer-contacts__list {
+  max-width: 250px;
+  margin: 0 auto;
+  padding: 28px;
+}
+.request-footer .footer-contacts__item {
+  margin: 10px 0;
+}
+.request-footer .footer-contacts__icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.request-footer .footer-contacts__tel {
+  color: #fff;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.request-footer .footer-contacts__opening-hours {
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+}
+.request-footer .footer-contacts__callback {
+  position: relative;
+  padding-left: 35px;
+  color: #fff;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.request-footer .footer-contacts__callback:before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 31px;
+  height: 31px;
+  background-color: transparent;
+  background-image: url(../img/css_sprites.png);
+  background-repeat: no-repeat;
+  background-position: -172px -75px;
+}
+
+@media (min-width: 768px) {
+  .request .form-request {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 776px;
+    margin: 50px auto;
+  }
+  .request .form-request__input-textarea {
+    width: 620px;
+  }
+
+  .request__wrapper {
+    display: flex;
+  }
+
+  .request__objects {
+    width: 45%;
+    min-width: 200px;
+  }
+  .request__objects ul {
+    padding: 30px 9% 60px;
+  }
+  .request__objects ul:after {
+    left: 9%;
+  }
+
+  .request-footer {
+    display: flex;
+  }
+  .request-footer__slogan {
+    width: 50%;
+  }
+  .request-footer__slogan::after {
+    left: 99%;
+    bottom: 111px;
+    border: 20px solid transparent;
+    border-left: 20px solid #4d4f58;
+  }
+  .request-footer__slogan p {
+    text-align: left;
+    padding: 120px 13px 2px;
+    font-size: 18px;
+  }
+  .request-footer .footer-contacts {
+    width: 50%;
+  }
+  .request-footer .footer-contacts__callback {
+    font-size: 18px;
+  }
+  .request-footer .footer-contacts__callback:before {
+    top: -5px;
+  }
+}
+@media (min-width: 1024px) {
+  .request__objects {
+    width: 40%;
+  }
+
+  .request__reviews {
+    width: 60%;
+  }
+
+  .request-footer__slogan {
+    position: relative;
+    background-color: #4D4F58;
+  }
+  .request-footer__slogan::after {
+    left: 99%;
+    bottom: 90px;
+    border: 20px solid transparent;
+    border-left: 20px solid #4D4F58;
+  }
+  .request-footer__slogan p {
+    font-size: 30px;
+    padding: 84px 44px 2px;
+  }
+  .request-footer .footer-contacts__list {
+    max-width: 500px;
+    padding: 20px 70px;
+    margin: 0;
+  }
+}
 .footer__navigation ul {
   margin: 10px 0;
   display: flex;

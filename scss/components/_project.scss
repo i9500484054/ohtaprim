@@ -113,9 +113,9 @@
   .project {
     &__img {
       display: flex;
+      width: 100%;
       margin: 0;
 
-      width: 100%;
 
       border-bottom: 1px solid $bg-color-grey;
     }
@@ -135,6 +135,9 @@
     span {
       margin-left: 0;
       margin-top: 15px;
+    }
+    img {
+      max-width: 300px;
     }
     .project-footer {
       display: flex;

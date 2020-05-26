@@ -169,21 +169,21 @@
         <div class="services__basic-services basic-services">
           <ul class="basic-services__list">
             <li class="basic-services__item basic-services__design">
-              <div>
+              <div class="basic-services__box">
                 <h3>Проектирование</h3>
                 <p>Специалисты компании «ОХТА-ПРИМ» выполняют весь комплекс работ по проектированию  зданий и сооружений</p>
               </div>
               <div class="basic-services__block-request-cost block-request-cost"> <a class="block-request-cost__more-details" href="#design">подробнее</a><a class="block-request-cost__discuss-the-project" href="#">обсудить проект</a></div>
             </li>
             <li class="basic-services__item basic-services__jobs">
-              <div>
+              <div class="basic-services__box">
                 <h3>Производство работ</h3>
                 <p>«ОХТА-ПРИМ» специализируется на выполнении огнезащитных и антикоррозионных работ.</p>
               </div>
               <div class="basic-services__block-request-cost block-request-cost"> <a class="block-request-cost__more-details" href="#">подробнее</a><a class="block-request-cost__discuss-the-project" href="#">обсудить проект</a></div>
             </li>
             <li class="basic-services__item basic-services__supervision">
-              <div>
+              <div class="basic-services__box">
                 <h3>Технический и авторский надзор</h3>
                 <p>Технический надзор за окрасочными работами обеспечивает получение долговечных покрытий, соответствующих заявленным техническим характеристикам.</p>
               </div>
@@ -194,21 +194,21 @@
               <p>Наша компания выполняет работы по производству и строительству как в комплексе, так и по отдельности.</p>
             </li>
             <li class="basic-services__item basic-services__production">
-              <div>
+              <div class="basic-services__box">
                 <h3>Производство</h3>
                 <p>Собственное производство резервуаров позволяет уделять пристальное внимание качеству, строго соблюдая установленные сроки.</p>
               </div>
               <div class="basic-services__block-request-cost block-request-cost"> <a class="block-request-cost__more-details" href="#">подробнее</a><a class="block-request-cost__discuss-the-project" href="#">обсудить проект</a></div>
             </li>
             <li class="basic-services__item basic-services__supply">
-              <div>
+              <div class="basic-services__box">
                 <h3>Поставка материалов</h3>
                 <p>Компания «ОХТА-ПРИМ» занимается комплексной поставкой антикоррозионных, огнезащитных и теплоизоляционных материалов по всей территории РФ </p>
               </div>
             </li>
             <div class="basic-services__block-request-cost block-request-cost"> <a class="block-request-cost__more-details" href="#">подробнее</a><a class="block-request-cost__discuss-the-project" href="#supply">обсудить проект</a></div>
             <li class="basic-services__item basic-services__development">
-              <div>
+              <div class="basic-services__box">
                 <h3>Разработки</h3>
                 <p> «ОХТА-ПРИМ» также является центром компетенций  в области исследований и экспертизы защитных покрытий.</p>
               </div>
@@ -465,34 +465,35 @@
       </section>
       <section class="main__request request" id="request">
         <h2>Обсудить проект</h2>
-        <form name="form" action="https://echo.htmlacademy.ru/" method="POST" enctype="multipart/form-data">
-          <input type="text" name="name" placholder="Ваше имя" required="required"/>
-          <input type="tel" name="tel" placholder="Телефон" required="required"/>
-          <input type="tel" name="tel" placholder="'Электронная почта" required="required"/>
-          <input type="tel" name="tel" placholder="'Организация" required="required"/>
-          <input type="tel" name="tel" placholder="'Организация" required="required"/>
-          <textarea rows="10" cols="50" name="abstracts" required="required"></textarea>
-          <input type="file" name="file" value="отправить" required="required"/>
-          <input type="submit" name="submit" value="отправить запрос" required="required"/>
+        <form class="request__form-request form-request" name="form" action="https://echo.htmlacademy.ru/" method="POST" enctype="multipart/form-data">
+          <input class="form-request__input" type="text" name="name" placeholder="Ваше имя" required="required"/>
+          <input class="form-request__input" type="tel" name="tel" placeholder="Телефон" required="required"/>
+          <input class="form-request__input" type="email" name="email" placeholder="Электронная почта" required="required"/>
+          <input class="form-request__input" type="text" name="tel" placeholder="Организация" required="required"/>
+          <textarea class="form-request__input form-request__input-textarea" rows="10" cols="50" name="сomments" placeholder="Комментарии" required="required"></textarea>
+          <label class="form-request__input form-request__input-file">прикрипить файл 
+            <input class="form-request__input" type="file" name="file" value="отправить" required="required"/>
+          </label>
+          <input class="form-request__input form-request__input-submit" type="submit" name="submit" value="отправить запрос" required="required"/>
         </form>
-        <div class="about__wrapper">
-          <div class="about__objects">
+        <div class="request__wrapper">
+          <div class="request__objects">
             <ul>
               <li>объекты</li>
               <li>293</li>
               <li>Реализованных объектов</li>
             </ul>
           </div>
-          <div class="about__reviews">
+          <div class="request__reviews">
             <h3>отзывы</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos vero inventore consequuntur veniam sunt exercitationem velit facilis est debitis quidem illo voluptates sit eveniet vitae, non cum aperiam quibusdam nisi?</p>
           </div>
         </div>
-        <div class="about__about-footer about-footer"> 
-          <div class="about-footer__slogan">
+        <div class="request__request-footer request-footer"> 
+          <div class="request-footer__slogan">
             <p>Наши специалисты готовы проконсультировать Вас</p>
           </div>
-          <div class="about-footer__footer-contacts footer-contacts">
+          <div class="request-footer__footer-contacts footer-contacts">
             <ul class="footer-contacts__list">
               <li class="footer-contacts__item"><i class="fas fa-phone-alt footer-contacts__icon"> </i></li>
               <li class="footer-contacts__item"><a class="footer-contacts__tel" href="#">+7 (812) 309-36-64</a></li>

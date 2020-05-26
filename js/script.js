@@ -5,8 +5,6 @@ $(function () {
 	addLink();
 
 
-
-
 	$('.basic-services__item:not(.basic-services__Add-title)').hover(
 		function () {
 			$(this).animate({padding: "0"}, 100);
