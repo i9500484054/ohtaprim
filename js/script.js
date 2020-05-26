@@ -4,7 +4,10 @@ $(function () {
 
 	addLink();
 
-	$('.basic-services__item').hover(
+
+
+
+	$('.basic-services__item:not(.basic-services__Add-title)').hover(
 		function () {
 			$(this).animate({padding: "0"}, 100);
 			// $('.block-request-cost').css('display','flex');
@@ -23,7 +26,7 @@ $(function () {
 		});
 
 
-	$('.header__navigation a').on('click', function (event) {
+	$('.header__wrapper a').on('click', function (event) {
 		event.preventDefault();// ????
 
 		let sectionId = $(this).attr('href') // id активной секции 

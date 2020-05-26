@@ -30,13 +30,13 @@ html(lang="ru")
           nav.main-conteiner__navigation-services
             ul
               li
-                a(href="#") ПОСТАВКА
+                a(class="btn-supply" href="#supply") ПОСТАВКА
                   span материалов и оборудования
               li
-                a(href="#") ВЫПОЛННЕНИЯ РАБОТ
+                a(class="btn-work" href="#work") ВЫПОЛННЕНИЯ РАБОТ
                   span антикоррозионная и огнезащита
               li
-                a(href="#") ПРОЕКТИРОВАНИЕ
+                a(class="btn-design" href="#design") ПРОЕКТИРОВАНИЕ
                   span разработка проектных решений и техническая поддержка
         nav.header__navigation
           ul
@@ -55,6 +55,9 @@ html(lang="ru")
       include components/_contact.pug
       include components/_services.pug
       include components/_project.pug
-      include components/_footer.pug
+      include components/_design.pug
+      include components/_work.pug
+      include components/_supply.pug
       include components/_request.pug
+      include components/_footer.pug
     script(src="js/script.js")

@@ -1,2 +1,32 @@
 section(class="main__request request", id="request")
-  
+  h2 Обсудить проект
+  form(name="form" action="https://echo.htmlacademy.ru/" method="POST" enctype="multipart/form-data")
+    input(type="text" name="name" placholder="Ваше имя" required)
+    input(type="tel" name="tel" placholder="Телефон" required)
+    input(type="tel" name="tel" placholder="'Электронная почта" required)
+    input(type="tel" name="tel" placholder="'Организация" required)
+    input(type="tel" name="tel" placholder="'Организация" required)
+    textarea(rows="10" cols="50" name="abstracts" required)
+    input(type="file" name="file" value="отправить" required)
+    input(type="submit" name="submit" value="отправить запрос" required)
+  div(class="about__wrapper")
+    .about__objects
+      ul
+        li объекты
+        li 293
+        li Реализованных объектов
+    .about__reviews
+      h3 отзывы
+      p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos vero inventore consequuntur veniam sunt exercitationem velit facilis est debitis quidem illo voluptates sit eveniet vitae, non cum aperiam quibusdam nisi?
+  div(class="about__about-footer about-footer") 
+    .about-footer__slogan
+      p Наши специалисты готовы проконсультировать Вас
+    div(class="about-footer__footer-contacts footer-contacts")
+      ul.footer-contacts__list
+        li.footer-contacts__item
+          i(class="fas fa-phone-alt footer-contacts__icon") 
+        li.footer-contacts__item
+          a(class="footer-contacts__tel", href="#") +7 (812) 309-36-64
+        li(class="footer-contacts__tel footer-contacts__opening-hours") пн-пт с 9:00 до 18:00
+        li.footer-contacts__item
+          a(class="footer-contacts__callback", href="#") Перезвонить мне
