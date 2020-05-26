@@ -1803,7 +1803,8 @@ body {
   grid-template-areas: "basic-services__design" "basic-services__jobs" "basic-services__supervision" "basic-services__Add-title" "basic-services__production" "basic-services__supply" "basic-services__development";
 }
 .services .basic-services__item {
-  padding: 10px;
+  position: relative;
+  padding: 20px;
 }
 .services .basic-services__item a {
   position: relative;
@@ -2594,4 +2595,46 @@ body {
 .swiper-button-next {
   background-position: -211px -137px;
   right: 0;
+}
+
+.block-request-cost {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 501;
+  width: 100%;
+}
+.block-request-cost a::before {
+  display: none !important;
+}
+.block-request-cost__more-details {
+  flex-basis: 50%;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #445469 !important;
+}
+.block-request-cost__more-details:hover {
+  background-color: #ADADAD !important;
+}
+.block-request-cost__more-details:active {
+  background-color: #445469 !important;
+}
+.block-request-cost__discuss-the-project {
+  flex-basis: 50%;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #74C4CF !important;
+}
+.block-request-cost__discuss-the-project:hover {
+  background-color: #286b74 !important;
+}
+.block-request-cost__discuss-the-project:active {
+  background-color: #74C4CF !important;
 }

@@ -2,7 +2,26 @@ $(function () {
 
 	let bodyWidth = $('body').width() // Значение ширины экрана
 
-	$("head").append('<link rel="stylesheet" href="css/main-test.css"/>')
+	addLink();
+
+	$('.basic-services__item').hover(
+		function () {
+			$(this).animate({padding: "0"}, 100);
+			// $('.block-request-cost').css('display','flex');
+		}, function() {
+			$(this).animate({padding: "20px"}, 100);
+			// $('.block-request-cost').css('display','none');
+		});
+
+
+	$('.company-customers li:nth-last-child(-n+7)').hover(
+		function () {
+			$(this).animate({padding: "0"}, 100);
+		}, function() {
+			$(this).animate({padding: "20px"}, 100);
+	
+		});
+
 
 	$('.header__navigation a').on('click', function (event) {
 		event.preventDefault();// ????
@@ -65,6 +84,9 @@ $(function () {
 	};
 	function removeLink() {
 		$("link[href='css/main-test.css']").remove()
+	}
+	function addLink() {
+		$("head").append('<link rel="stylesheet" href="css/main-test.css"/>')
 	}
 });
 
