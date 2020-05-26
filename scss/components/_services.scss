@@ -278,7 +278,7 @@
       &__list {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 0.5fr 1fr;
+        grid-template-rows: 2fr 1.5fr 2fr;
         gap: 0px 0px;
         grid-template-areas: "basic-services__design basic-services__jobs basic-services__supervision" "basic-services__Add-title basic-services__Add-title basic-services__Add-title" "basic-services__production basic-services__supply basic-services__development";}
     }

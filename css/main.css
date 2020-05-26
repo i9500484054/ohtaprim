@@ -759,6 +759,11 @@ a {
   cursor: pointer;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
 .triangle::after {
   content: "";
   position: absolute;
@@ -1153,6 +1158,7 @@ body {
 .about .description p {
   max-width: 430px;
   padding: 14px 0px 30px 30px;
+  margin: 0 auto;
   text-align: left;
   color: #fff;
   font-size: 12px;
@@ -1160,9 +1166,9 @@ body {
   font-weight: 500;
 }
 .about .description table {
+  width: 300px;
   border-collapse: collapse;
-  margin: 60px auto;
-  margin-left: 45px;
+  margin: 50px auto;
 }
 .about .description tr:nth-child(1) {
   display: none;
@@ -1517,6 +1523,7 @@ body {
   .about .description p {
     padding-left: 20px;
     padding-bottom: 0;
+    margin: 0;
   }
   .about .description table {
     margin: 0;
@@ -1553,6 +1560,9 @@ body {
   .about .description td:nth-child(3):before {
     top: -40px;
     left: 0px;
+  }
+  .about .company-customers {
+    grid-template-rows: 250px 250px 250px 250px;
   }
   .about .company-customers__item-one {
     display: flex;
@@ -2118,7 +2128,7 @@ body {
   .services .basic-services__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 0.5fr 1fr;
+    grid-template-rows: 2fr 1.5fr 2fr;
     gap: 0px 0px;
     grid-template-areas: "basic-services__design basic-services__jobs basic-services__supervision" "basic-services__Add-title basic-services__Add-title basic-services__Add-title" "basic-services__production basic-services__supply basic-services__development";
   }

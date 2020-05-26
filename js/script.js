@@ -40,40 +40,6 @@ $(function () {
 			}, 1000).css('position', 'absolute')
 		}
 
-
-
-
-		// анимированное сворачивание хедера 
-		// if (bodyWidth >= 768) {
-		// 	$('.header').animate({
-		// 		width: "30%"
-		// 	}, 1000).css({
-		// 		height: "100vh"
-		// 	})
-		// } else {
-		// 	$('.main-conteiner__navigation-services').hide()
-		// 	$('.header').animate({
-		// 		height: "200px"
-		// 	}, 1000)
-			
-		// 	$('.main-conteiner__logo').css({
-		// 		"width": "100px",
-		// 		"height": "100px",
-		// 		"margin-top": "10px"
-		// 	});
-		// 	$('.header__navigation').animate({
-		// 		bottom: "5px",
-		// 		left: "0",
-		// 		width: "100%"
-		// 	}).css({
-		// 		"position": "absolute",
-		// 	});
-
-		// 	$('.main').css({
-		// 		"padding-top": "200px"
-		// 	});
-		// }
-
 		// Читска body от ранее открытых секций 
 		hideContentSection(); 
 		// Добавления активной секции

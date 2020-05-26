@@ -110,14 +110,15 @@
     p {
       max-width: 430px;
       padding: 14px 0px 30px 30px;
+      margin: 0 auto;
       text-align: left;
       @include text($text-color-white, $font-size-xs, $font-size-xs + 2px, 500);
     }
 
     table {
+      width: 300px;
       border-collapse: collapse;
-      margin: 60px auto;
-      margin-left: 45px;
+      margin: 50px auto;
     }
 
     tr:nth-child(1) {
@@ -404,6 +405,7 @@
       p {
         padding-left: 20px;
         padding-bottom: 0;
+        margin: 0;
       }
 
       table {
@@ -448,6 +450,7 @@
       }
     }
     .company-customers {
+      grid-template-rows: 250px 250px 250px 250px;
       &__item-one {
         display: flex;
         justify-content: center;
